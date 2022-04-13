@@ -6,19 +6,19 @@ music_bot.py:
     command:
         !jam https://youtube.com/XXXXXXXXX
 
-    start:
-        1.install dependancy:
+###start:
+      1.install dependancy:
             pip install discord.py[voice]
             sudo apt-get install ffmpeg libffi-dev
-        2.in settings.py add the token id of your bot
-        3.Run python music_bot.py
+      2.in settings.py add the token id of your bot
+      3.Run python music_bot.py
 
-game_bot.py:
+###game_bot.py:
     a cool rpg game.
 
-    MySQL database schema is in "database.mysql".
+###MySQL database schema is in "database.mysql".
 
-    Run with:
+   Run with:
         pip install discord.py
         python rpg_bot.py
 
