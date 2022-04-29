@@ -35,23 +35,13 @@ class RpgBot:
             self.add_all_users_to_db()
             print("[*] Connected to Discord as: " + self.bot.user.name)
 
-        # on player join -> log player in db
-        # say hello, convince them to play
         @self.bot.event
         async def on_member_join(member):
             self.add_user_to_db(member)
 
-        # on message -> give player xp points (but only once per minute)
-        # (in the add-xp function, check if they level up)
         @self.bot.event
         async def on_message(message):
             self.update_experience_points(message.author, 1)
-
-        # TODO on level up -> add item to inventory
-
-        # !stats - check your xp and attributes
-        # !rank - list top X players on the server
-        # !inventory - list your inventory
 
         @self.bot.command(name='stats',
                           description="Get detailed information about your RPG character.",
@@ -67,9 +57,7 @@ Stats for %s
 Joined server: %s
 Experience points: %s`""" % (context.message.author.mention, player['join_server_date'], player['xp_points']))
 
-            # TODO what can you with xp points? get commands? attack people? craft stuff?
-
-    def get_player(self, user_id):
+     def get_player(self, user_id):
         try:
             with self.db.cursor() as cursor:
                 sql = "SELECT `user_id`, `join_server_date`, `xp_points` FROM `players` WHERE `user_id`=%s"
