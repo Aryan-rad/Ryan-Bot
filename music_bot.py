@@ -25,9 +25,6 @@ class MusicBot:
                           aliases=['start','music','playmusic','enjoy','rockout'],
                           pass_context=True)
         async def play(context, url):
-            #Example: 'https://www.youtube.com/watch?v=SXtYb'
-            #if bot is connected..,
-            #state = VoiceState(bot)
             async def announce_song():
                 await self.bot.say("Now playing: %s - %s" % (self.player.title, self.player.description))
 
