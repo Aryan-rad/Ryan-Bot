@@ -23,4 +23,4 @@ Run With:
 
 # Reference:
     https://github.com/Rapptz/discord.py/blob/async/examples/playlist.py
-    https://github.com/DevDungeon/DiscordRpgBot.git
+    https://www.youtube.com/watch?v=L10FeA84EgE
